@@ -34,7 +34,7 @@ function BlogCard({blog}){
     axios.post(`/api/blog/like/${blog._id}`, data).then((response)=> {
       console.log(response);
       setUserLiked(true);
-      axios.post('/api/notification/create', {receiverId: blog.authorid, senderId: userData._id, message: `You Post was liked by ${userData.firstname +" "+ userData.lastname}`}).then((respon)=> {
+      axios.post('/api/notification/create', {receiverId: blog.authorid, senderId: userData._id, message: `You Post was liked by <span className="font-bold text-lg">${userData.firstname +" "+ userData.lastname}</span>`}).then((respon)=> {
         console.log(respon);
       })
     })
