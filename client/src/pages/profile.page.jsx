@@ -60,17 +60,18 @@ function UserProfile(){
         <div className="mt-3 header-container bg-white flex flex-row justify-between rounded-md p-3">
         <div className="userprofile-container w-full">
           
-            <div className="headerphoto-container h-36 w-full m-1 border border-black rounded-md shadow-lg">
+            <div className="headerphoto-container h-36 w-full m-1 border border-black rounded-md shadow-lg relative">
                 <HeaderPic userData={userData}/>
+                <ProfilePic userData={userData} />
             </div>
            
            <div className="userd-container flex flex-row justify-between items-start">
             <div className="left-conatiner">
-            <div className="profileimg-container h-28 rounded-full m-1 border border-black shadow-md">
-              <ProfilePic userData={userData} />
+            <div className="profileimg-container h-10 rounded-full m-1  relative">
+              
             
             </div>
-                <div className="userfullname-container">
+                <div className="userfullname-container ml-4">
                         <p className="font-bold text-black">{userData && userData.firstname+' '+ userData.lastname}</p>
                         <p className="font-light text-sm text-black">{userData && '@'+userData.username}</p>
                     </div>

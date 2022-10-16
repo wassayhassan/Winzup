@@ -8,7 +8,7 @@ function ProfilePic({userData}){
     }, [userData])
 
         return (    
-            <img src={userData.profilepic? `/api/user/photo/${userData.profilepic}`: `/api/user/photo/profilepic-general.png`} alt="" className='h-full w-28 rounded-full' />
+            <img src={userData.profilepic? `/api/user/photo/${userData.profilepic}`: `/api/user/photo/profilepic-general.png`} alt="" className='h-28 w-28 rounded-full absolute top-20 left-3' />
      )
     
        

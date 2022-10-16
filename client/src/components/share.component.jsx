@@ -52,7 +52,7 @@ function SharePost({postId}){
     return (
         <>     
            <div className="share flex flex-row justify-center items-center w-1/3 hover:bg-slate-50 rounded-md p-1 bg-white ml-1 mr-1 cursor-pointer" onClick={()=> handleOpen()}>
-            <Button color="#fff" size="1.1em">
+            <Button color="#fff" size="1.05em">
             <AiOutlineShareAlt  size='1.5em' color="#000"/>
             <p className="text-black font-semibold mx-2">SHARE</p>
             </Button>

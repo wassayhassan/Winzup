@@ -59,8 +59,8 @@ function BlogCard({blog}){
                     <img src={authorData.profilepic? `/api/user/photo/${authorData.profilepic}`: `/api/user/photo/profilepic-general.png`} alt="" className=' w-10 h-10 rounded-full' />
                   </div>
                   <div className="flex flex-col justify-center p-1">
-                     <p className="font-semibold text-base">{blog.authorfirstname+' '+blog.authorlastname}</p>
-                     <p className="text-left text-sm font-light">{format(blog.createdAt)}</p>
+                    <p className="font-semibold text-base text-left">{blog.authorfirstname+' '+blog.authorlastname}</p>
+                     <p className="text-left text-xs font-light">{format(blog.createdAt)}</p>
 
                   </div>
                   

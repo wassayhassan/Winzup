@@ -30,7 +30,7 @@ const createShareNoti = async(req, res)=> {
     let postId = req.body.postId;
     let senderId = req.body.senderId;
     let sendername = req.body.sendername;
-    let msg = `${sendername} shared a post with you`;
+    let msg = `<span className='font-bold text-lg'>${sendername}</span> shared a post with you`;
     receiverusers.forEach((user)=> {
          let notif = new notiModel({receiverId: user, senderId: senderId, postId: postId,message: msg});
          notif.save().then((res)=> {
