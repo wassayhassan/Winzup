@@ -53,7 +53,7 @@ async function logoutUser(){
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar><img src={userData && userData.profilepic? `/api/user/photo/${userData.profilepic}`: `/api/user/photo/profilepic-general.png`}/></Avatar>
+            <Avatar src={userData && userData.profilepic? `/api/user/photo/${userData.profilepic}`: `/api/user/photo/profilepic-general.png`}></Avatar>
           </IconButton>
         </Tooltip>
       </Box>
