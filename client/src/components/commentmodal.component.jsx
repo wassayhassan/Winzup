@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import {Button} from 'flowbite-react';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import {AiOutlineComment} from "react-icons/ai";
@@ -73,7 +73,9 @@ export default function CommentModal({blogid}) {
 
   return (
     <div>
-      <Button onClick={handleOpen} endIcon={<AiOutlineComment  size='1.5em' color="#000" />}><p className='text-black'>Comment</p></Button>
+      <div>
+      <Button color="#fff" onClick={handleOpen} size="1.2em" > <AiOutlineComment  size='1.5em' color="#000" /> <p className='text-black'>Comment</p></Button>
+      </div>
       
       <Modal
         open={open}

@@ -6,7 +6,7 @@ import {useState, useEffect, useRef} from 'react';
 import BlogEditDots from "./blogeditdots.component";
 import BlogImages from "./blogimages.component";
 import CommentModal from "./commentmodal.component";
-import { Button } from "@mui/material";
+import { Button } from "flowbite-react";
 import {useSelector} from 'react-redux';
 import Like from "./like.component";
 import SharePost from "./share.component";
@@ -76,12 +76,11 @@ function BlogCard({blog}){
               </div>
             </div>
 
-            <div className="time-container font-thin text-sm"></div>
             <div className="blogtitle text-left font-semibold bg-white p-1 m-1 rounded-md">{blog.blogData}</div>
             <div className="blogimages-container flex flex-row flex-wrap">
               <BlogImages images = {blog.images} />
             </div>
-            <div className="useraction-container mt-1 flex flex-row border-t-2">
+            <div className="useraction-container mt-1 flex flex-row border-t">
               <Like userLiked={likeRef} likeBlog = {likeBlog} ulike = {userLiked} />
               <div className="comment w-1/3 hover:bg-slate-50 rounded-md p-1 flex flex-row justify-center bg-white ml-1 mr-1"><CommentModal blogid = {blog._id} /></div>
               <SharePost postId={blog._id} />

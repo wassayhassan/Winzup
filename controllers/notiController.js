@@ -17,7 +17,7 @@ const createnoti = async(req, res)=> {
 const getNotificationsById = async(req, res)=> {
     const userId = req.body.userId;
     try {
-        const notifications = await notiModel.find({receiverId: userId});
+        const notifications = await notiModel.find({receiverId: userId}).sort({createdAt: 'desc'});
         res.status(201).json(notifications);
     } catch (err) {
         res.status(500).json(err)
