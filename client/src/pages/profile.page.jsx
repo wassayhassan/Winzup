@@ -93,7 +93,7 @@ function UserProfile(){
         
         
         </div>
-        <div className="userblogs-container sm:w-4/5 md:w-4/5 lg:w-4/5 2xl:w-4/5">
+        <div className="userblogs-container sm:w-4/5 md:w-4/5 lg:w-4/5 2xl:w-4/5 overflow-y-hidden overflow-x-hidden">
            <BlogList blogs = {userBlogs}/>
         </div>
         <div className="flex flex-row justify-center">

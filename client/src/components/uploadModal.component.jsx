@@ -8,6 +8,7 @@ import { getAll } from "../slices/blogSlice";
 import {  useDispatch } from "react-redux";
 import { upload } from '../slices/blogSlice';
 import { Textarea, Button } from "flowbite-react";
+import {FcAddImage} from 'react-icons/fc';
 
 const style = {
   position: 'absolute',
@@ -87,8 +88,11 @@ export default function UploadModal() {
         />
             </div>
             <div className='inputfield flex flex-col p-2'>
-                <label htmlFor="" className='font-bold text-lg'>Add Image</label>
-                <input type="file" name="images" multiple onChange={(e)=> {
+                <label htmlFor="image" className='font-bold text-lg cursor-pointer flex flex-row items-center border-2 w-32 rounded-md'>
+                  Add Image
+                  <FcAddImage size="1.2em" />
+                </label>
+                <input id="image" type="file" name="images" hidden multiple onChange={(e)=> {
                   for(let i = 0; i < e.target.files.length; i++){
                     let fil = e.target.files[i];
                   
@@ -96,7 +100,8 @@ export default function UploadModal() {
                   }
                 
                   }
-                  }  className="border-2 rounded-md p-2 border-gray-500" />
+                  }  className="border-2 rounded-md p-2 border-gray-500 cursor-pointer" />
+
             </div>
 
             <div className='upload-container p-2 flex flex-row justify-end'>

@@ -35,7 +35,7 @@ function Home(){
           setLoading(false);
         })
        }
-    }, []);
+    }, [userData]);
 
     function loadMoreBlogs(){
           setCurrentPage(currentPage + 1);
@@ -61,7 +61,7 @@ function Home(){
         <div className="heading-container">
             <p className="font-bold text-blue-500 text-2xl text-left">Home</p>
         </div>
-        <div className = "blogs-container min-h-screen relative w-full">
+        <div className = "blogs-container min-h-screen relative w-full overflow-y-hidden overflow-x-hidden">
 
          <BlogList blogs = {blogs}/>
          

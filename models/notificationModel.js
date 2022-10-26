@@ -4,7 +4,8 @@ const notiSchema = new mongoose.Schema({
     receiverId: String,
     senderId: String,
     postId: String,
-    message : String
+    message : String,
+    read: String
 },
 {
     timestamps: true

@@ -6,7 +6,7 @@ import NavBar from "../components/navbar.component";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect, useRef } from "react";
 import {IoIosArrowBack} from 'react-icons/io'
-import { useNavigate } from "react-router-dom";
+import Divider from '@mui/material/Divider';
 import MessageList from "./messagelist.component";
 import { Link} from "react-router-dom";
 import axios from "axios";
@@ -170,7 +170,7 @@ useEffect(()=> {
             
         </div>
         <div className="messageui h-full">
-        <div className="header bg-white rounded-md flex flex-row justify-between">
+        <div className="header bg-white flex flex-row justify-between">
             <div className="flex flex-row">
                 <Link to="/messages" className="flex flex-col justify-center cursor-pointer" >
                    <IoIosArrowBack size="1.5em" color="blue" />
@@ -184,8 +184,10 @@ useEffect(()=> {
             <div className="call-container p-2 cursor-pointer">
              <FriendCallModal friendId={friendId} setAcceptedCall={setAcceptedCall} currentSocket={socket.current} myVideoRef={myVideoRef} friendVideoRef={friendVideoRef} myStream={myStream} setMyStream={setMyStream} signalData={signalData} friendData={friendData} />
             </div>
+            
         </div>
-        <div className="messages-container md:h-96 sm:h-96 lg:h-96 2xl:h-96 bg-white m-1 rounded-md overflow-y-scroll  ">
+        <div className="messages-container md:h-96 sm:h-96 lg:h-96 2xl:h-96 bg-white rounded-md overflow-y-scroll  ">
+          <Divider />
             <MessageList  messages = {messages}/>
         </div>
         

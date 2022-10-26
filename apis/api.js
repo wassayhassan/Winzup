@@ -7,7 +7,7 @@ const {likeBlog, blogUpload, getall, getBlogsByPage, getBlogsByUserId, blogStatu
 const {getPhoto} = require("../controllers/photoController");
 const {createCoversation, getCoverssationById, createMessage, findMsgsByConId, findConversation, deleteConversation} = require("../controllers/chatController");
 const {createComment, findCommentsByBlogId} = require("../controllers/commentController")
-const {createnoti, getNotificationsById, createShareNoti } = require("../controllers/notiController");
+const {createnoti, getNotificationsById, createShareNoti, makeNotiRead } = require("../controllers/notiController");
 const { create, findAll, update, remove, findById } = require('../controllers/reportsController');
 const { countIps } = require('../controllers/ipController');
 var storage = multer.diskStorage({
@@ -74,6 +74,7 @@ api.post('/blog/like/:blogid', likeBlog)
 api.post('/notification/create', createnoti);
 api.post('/notification/share/create', createShareNoti)
 api.post('/notification/getbyuserid', getNotificationsById);
+api.post('/notification/update/read/:id', makeNotiRead)
 
 
 //reports apis
